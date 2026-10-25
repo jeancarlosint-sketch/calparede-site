@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidade — CalParede</title>
+<link rel="icon" href="icone.png">
+<style>
+:root{--fundo:#F3EFE7;--texto:#24211C;--suave:#6F685D;--linha:#E2DBCE}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--fundo);color:var(--texto);font:17px/1.65 "Segoe UI",system-ui,-apple-system,sans-serif}
+.topo{max-width:780px;margin:0 auto;padding:22px 20px;display:flex;align-items:center;gap:12px}
+.topo img{width:30px;height:30px}
+.topo a{text-decoration:none;color:var(--texto);font-weight:700}
+main{max-width:780px;margin:0 auto;padding:20px 20px 60px}
+h1{font-size:clamp(30px,5vw,42px);letter-spacing:-.015em;line-height:1.15;margin-bottom:6px}
+.data{color:var(--suave);font-size:15px;margin-bottom:28px}
+h2{font-size:19px;margin:30px 0 8px}
+p,li{max-width:68ch}
+p{margin-bottom:12px}
+ul{padding-left:22px;margin-bottom:12px}
+li{margin-bottom:6px}
+code{font-family:Consolas,monospace;font-size:15px;background:#EAE4D8;padding:1px 5px;border-radius:4px}
+a{color:var(--texto)}
+footer{border-top:1px solid var(--linha);max-width:780px;margin:0 auto;padding:20px;font-size:14px;color:var(--suave)}
+</style>
+</head>
+<body>
+<header class="topo"><img src="icone.png" alt=""><a href="./">CalParede</a></header>
+<main>
+  <h1>Política de privacidade</h1>
+  <p class="data">Atualizada em 25 de outubro de 2026</p>
+
+  <p>O CalParede é um programa para Windows de uso pessoal que mostra a agenda no papel de parede. Esta política explica quais dados ele trata, onde ficam guardados e com quem são compartilhados.</p>
+
+  <h2>1. Não há servidor do CalParede</h2>
+  <p>O CalParede não possui servidor próprio, não coleta estatísticas de uso e não envia dados a quem desenvolveu o programa. Todo o processamento acontece no computador do usuário.</p>
+
+  <h2>2. Dados do Google Agenda</h2>
+  <p>Quando o usuário conecta a conta do Google, o CalParede solicita duas permissões:</p>
+  <ul>
+    <li><b>Ver agendas e eventos</b> (<code>calendar.readonly</code>), para desenhar no papel de parede os compromissos das agendas que o usuário escolher;</li>
+    <li><b>Criar e excluir eventos</b> (<code>calendar.events</code>), apenas para gravar no Google Agenda os compromissos que o próprio usuário adiciona pelo painel do CalParede e para apagá-los quando ele pede.</li>
+  </ul>
+  <p>São usados apenas o título, a data, o horário, a cor e a agenda de cada evento. Esses dados não são vendidos, não são usados para publicidade, não são transferidos a terceiros e não são usados para treinar modelos de inteligência artificial.</p>
+  <p>O uso das informações recebidas das APIs do Google segue a <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de Dados do Usuário dos Serviços de API do Google</a>, incluindo os requisitos de Uso Limitado.</p>
+
+  <h2>3. O que fica guardado no computador</h2>
+  <ul>
+    <li>Na pasta <code>%APPDATA%\CalParede</code>: configurações, compromissos criados pelo painel, uma cópia temporária dos eventos para montar a imagem e o registro de funcionamento do programa.</li>
+    <li>A credencial do aplicativo e o acesso à conta do Google ficam no arquivo <code>google.dat</code>, protegidos pela proteção de dados do Windows (DPAPI), que só permite a leitura pelo mesmo usuário no mesmo computador.</li>
+  </ul>
+
+  <h2>4. Outros serviços</h2>
+  <ul>
+    <li><b>Clima:</b> se o usuário ativar o clima, o programa consulta a <a href="https://open-meteo.com/">Open-Meteo</a> com as coordenadas da cidade configurada. Nenhum dado da agenda é enviado.</li>
+    <li><b>Agendas por link (.ics):</b> se o usuário cadastrar links de outras agendas, o programa apenas baixa esses arquivos dos endereços informados.</li>
+  </ul>
+
+  <h2>5. Como apagar os dados</h2>
+  <ul>
+    <li>No painel do CalParede, em Ajustes, o botão <b>Desconectar</b> apaga o acesso salvo e revoga a permissão junto ao Google.</li>
+    <li>A permissão também pode ser removida a qualquer momento em <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+    <li>Para apagar tudo, basta executar <code>desinstalar.bat</code> e excluir a pasta <code>%APPDATA%\CalParede</code>.</li>
+  </ul>
+
+  <h2>6. Contato</h2>
+  <p>Dúvidas sobre esta política podem ser enviadas pela página do projeto: <a href="https://github.com/jeancarlosint-sketch/calparede-site/issues">github.com/jeancarlosint-sketch/calparede-site</a>.</p>
+</main>
+<footer>CalParede · uso pessoal · <a href="./">página inicial</a></footer>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CalParede — agenda no papel de parede</title>
+<meta name="description" content="CalParede mostra o Google Agenda no papel de parede do Windows e permite adicionar compromissos em três cliques.">
+<link rel="icon" href="icone.png">
+<style>
+:root{--fundo:#F3EFE7;--cartao:#FFFFFF;--texto:#24211C;--suave:#6F685D;--linha:#E2DBCE;--destaque:#D2462F}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--fundo);color:var(--texto);font:17px/1.6 "Segoe UI",system-ui,-apple-system,sans-serif}
+.topo{max-width:880px;margin:0 auto;padding:22px 20px;display:flex;align-items:center;gap:12px}
+.topo img{width:30px;height:30px}
+.topo b{font-size:17px}
+.topo nav{margin-left:auto;display:flex;gap:18px;font-size:15px}
+a{color:var(--texto)}
+main{max-width:880px;margin:0 auto;padding:30px 20px 60px}
+h1{font-size:clamp(34px,6vw,54px);line-height:1.08;letter-spacing:-.02em;font-weight:650;max-width:15ch}
+h1 span{color:var(--destaque)}
+.lead{font-size:19px;color:var(--suave);max-width:58ch;margin:18px 0 34px}
+.grade{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-bottom:40px}
+.item{background:var(--cartao);border:1px solid var(--linha);border-radius:14px;padding:20px}
+.item h2{font-size:16px;margin-bottom:6px}
+.item p{font-size:15px;color:var(--suave)}
+h3{font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--suave);margin:34px 0 12px}
+.texto p{margin-bottom:12px;max-width:68ch}
+footer{border-top:1px solid var(--linha);max-width:880px;margin:0 auto;padding:20px;font-size:14px;color:var(--suave);display:flex;gap:18px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<header class="topo">
+  <img src="icone.png" alt="">
+  <b>CalParede</b>
+  <nav><a href="privacidade.html">Privacidade</a></nav>
+</header>
+<main>
+  <h1>Sua agenda no <span>papel de parede</span> do Windows.</h1>
+  <p class="lead">O CalParede desenha o calendário do mês, os compromissos do dia e os próximos prazos diretamente no fundo da área de trabalho, e permite adicionar um compromisso em três cliques.</p>
+
+  <div class="grade">
+    <div class="item"><h2>Google Agenda</h2><p>Lê as agendas escolhidas e grava os compromissos criados pelo painel, com login oficial do Google.</p></div>
+    <div class="item"><h2>Três cliques</h2><p>Dia, horário e tipo. O compromisso é salvo na hora e o papel de parede se atualiza sozinho.</p></div>
+    <div class="item"><h2>Feito para o escritório</h2><p>Lista de prazos e audiências com contagem de dias, feriados do Amapá e recesso forense.</p></div>
+  </div>
+
+  <h3>Como funciona</h3>
+  <div class="texto">
+    <p>O CalParede é um programa de uso pessoal que roda apenas no computador de quem o instala. Ele monta uma página com a agenda, gera uma imagem dela e a aplica como papel de parede do Windows.</p>
+    <p>Para conversar com o Google Agenda, usa a API oficial do Google Calendar com permissão de leitura das agendas e de criação e exclusão dos eventos que o próprio usuário cria pelo painel. Não há servidor do CalParede: tudo acontece entre o computador do usuário e o Google.</p>
+    <p>Detalhes sobre os dados tratados estão na <a href="privacidade.html">política de privacidade</a>.</p>
+  </div>
+</main>
+<footer>
+  <span>CalParede · uso pessoal</span>
+  <a href="privacidade.html">Política de privacidade</a>
+  <a href="https://github.com/jeancarlosint-sketch/calparede-site/issues">Contato</a>
+</footer>
+</body>
+</html>
